@@ -9,19 +9,18 @@ import App from './components/App';
 import NotFound from './components/NotFound';
 
 function Router() {
-    return(
-        <BrowserRouter>
-            <div>
-                <Match exactly pattern="/" component={StorePicker} />
-                <Match pattern="/store/:storeId" component={App} />
-                <Miss component={NotFound} />
-            </div>
-        </BrowserRouter>
-        
-    )
+  return(
+    <BrowserRouter>
+      <div>
+        <Match exactly pattern="/" component={StorePicker} />
+        <Match pattern="/store/:storeId" component={App} />
+        <Miss component={NotFound} />
+      </div>
+    </BrowserRouter>
+  )
 }
 
 render(
-    <Router />,
-    document.getElementById('main')
+  <Router />,
+  document.getElementById('main')
 );
