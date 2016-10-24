@@ -92,10 +92,10 @@ class Inventory extends React.Component {
       <nav className="login">
         <h2>Inventory</h2>
         <p>Sign in to manage your store's inventory</p>
-        <button className="twitter" onClick={() => this.anonymously()}>Log In Anonymously</button>
+        <button className="anonymous" onClick={() => this.anonymously()}>Log In Anonymously</button>
         <button className="github" onClick={() => this.authenticate('github')}>Log In with GitHub</button>
         <button className="facebook" onClick={() => this.authenticate('facebook')}>Log In with Facebook</button>
-        <button className="twitter" onClick={() => this.authenticate('google')}>Log In with Google</button>
+        <button className="google" onClick={() => this.authenticate('google')}>Log In with Google</button>
       </nav>
     )
   }
