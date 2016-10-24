@@ -18,4 +18,4 @@ I published the assignment on Zeit's now.sh, after 30 minutes of no traffic it w
 
 https://ns-oqbpxqvdpl.now.sh
 
-If any problem should arise please contact me!
+If any problem should arise or have any question feel free to contact me! :)
