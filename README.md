@@ -8,7 +8,7 @@ This is the project I build in the React for Beginners online course, it's a rea
 - React Router 4.0.0 (Controller)
 - Babel (JavaScript compiler)
 - ES6 Javascript, HTML5, CSS (Front-end)
-- Firebase (Back-end)
+- Firebase (Back-end, Authentication)
 - Webpack
 - Node.js
 
