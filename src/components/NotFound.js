@@ -3,7 +3,7 @@ import React from 'react';
 class NotFound extends React.Component {
 	render() {
 		return(
-			<h2>Store Not Found! :(</h2>
+			<h2 id="not-found">Store Not Found!</h2>
 		)
 	}
 }

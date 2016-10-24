@@ -12,6 +12,7 @@ class Inventory extends React.Component {
     this.authenticate = this.authenticate.bind(this);
     this.authHandler = this.authHandler.bind(this);
     this.logout = this.logout.bind(this);
+    this.anonymously = this.anonymously.bind(this);
     
     this.state = {
       uid: null,
@@ -75,14 +76,26 @@ class Inventory extends React.Component {
     });
   }
 
+  anonymously() {
+    base.auth().signInAnonymously().catch(function(error) {
+      console.log("Milk?");
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode);
+      console.log(errorMessage);
+    })
+  };
+
   renderLogin() {
     return(
       <nav className="login">
         <h2>Inventory</h2>
         <p>Sign in to manage your store's inventory</p>
+        <button className="twitter" onClick={() => this.anonymously()}>Log In Anonymously</button>
         <button className="github" onClick={() => this.authenticate('github')}>Log In with GitHub</button>
         <button className="facebook" onClick={() => this.authenticate('facebook')}>Log In with Facebook</button>
-        <button className="twitter" onClick={() => this.authenticate('twitter')}>Log In with Google</button>
+        <button className="twitter" onClick={() => this.authenticate('google')}>Log In with Google</button>
       </nav>
     )
   }
@@ -117,7 +130,7 @@ class Inventory extends React.Component {
     if(this.state.uid !== this.state.owner) {
       return(
         <div>
-          <p>Sorry you aren't the owner of this store!</p>
+          <p>Sorry you aren't the owner of this store! You can create a new store in the main page.</p>
           {logout}
         </div>
       )
